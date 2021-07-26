@@ -29,7 +29,7 @@
       <instanceId>3</instanceId>
     </metaArgs>
   </loggers>
-  <modMap-length>44</modMap-length>
+  <modMap-length>45</modMap-length>
   <modMap key="xdc.runtime.Assert">
     <id>32770</id>
     <logger>null</logger>
@@ -200,53 +200,58 @@
     <logger>null</logger>
     <diagsMask>0000110000000000</diagsMask>
   </modMap>
-  <modMap key="ti.uia.events.DvtTypes">
+  <modMap key="ti.sysbios.gates.GateHwi">
+    <id>32811</id>
+    <logger>null</logger>
+    <diagsMask>0000110000000000</diagsMask>
+  </modMap>
+  <modMap key="ti.sysbios.gates.GateMutexPri">
     <id>32812</id>
     <logger>null</logger>
     <diagsMask>0000110000000000</diagsMask>
   </modMap>
-  <modMap key="ti.uia.events.UIAErr">
+  <modMap key="ti.sysbios.gates.GateMutex">
     <id>32813</id>
     <logger>null</logger>
     <diagsMask>0000110000000000</diagsMask>
   </modMap>
-  <modMap key="ti.uia.events.UIAEvt">
-    <id>32814</id>
-    <logger>null</logger>
-    <diagsMask>0000110000000000</diagsMask>
-  </modMap>
-  <modMap key="ti.uia.runtime.EventHdr">
+  <modMap key="ti.uia.events.DvtTypes">
     <id>32816</id>
     <logger>null</logger>
     <diagsMask>0000110000000000</diagsMask>
   </modMap>
-  <modMap key="ti.uia.runtime.QueueDescriptor">
+  <modMap key="ti.uia.events.UIAErr">
     <id>32817</id>
     <logger>null</logger>
     <diagsMask>0000110000000000</diagsMask>
   </modMap>
-  <modMap key="ti.uia.runtime.UIAMetaData">
+  <modMap key="ti.uia.events.UIAEvt">
     <id>32818</id>
     <logger>null</logger>
     <diagsMask>0000110000000000</diagsMask>
   </modMap>
-  <modMap key="ti.sysbios.gates.GateHwi">
+  <modMap key="ti.uia.runtime.EventHdr">
     <id>32820</id>
     <logger>null</logger>
     <diagsMask>0000110000000000</diagsMask>
   </modMap>
-  <modMap key="ti.sysbios.gates.GateMutex">
+  <modMap key="ti.uia.runtime.QueueDescriptor">
     <id>32821</id>
     <logger>null</logger>
     <diagsMask>0000110000000000</diagsMask>
   </modMap>
+  <modMap key="ti.uia.runtime.UIAMetaData">
+    <id>32822</id>
+    <logger>null</logger>
+    <diagsMask>0000110000000000</diagsMask>
+  </modMap>
   <modMap key="ti.uia.loggers.LoggerStopMode">
-    <id>32823</id>
+    <id>32824</id>
     <logger>null</logger>
     <diagsMask>0000110000000000</diagsMask>
   </modMap>
   <modMap key="ti.sysbios.utils.Load">
-    <id>32825</id>
+    <id>32826</id>
     <logger>Load Logger</logger>
     <diagsMask>0000110000010000</diagsMask>
   </modMap>

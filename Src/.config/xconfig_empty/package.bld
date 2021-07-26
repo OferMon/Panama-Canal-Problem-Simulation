@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: 'C:/TI_RTOS/Workspace/RT_FinProj_Part1_MontanoHadad/empty.cfg',
+        cfgScript: 'C:/TI_RTOS/Workspace/RT_FinProj_Part2_MontanoHadad/empty.cfg',
         profile: 'release',
         cfgHome: 'xconfig_empty',
 });
@@ -40,8 +40,8 @@ else {
 }
 
 var thisObj = {
-    cfg:        'C:/TI_RTOS/Workspace/RT_FinProj_Part1_MontanoHadad/empty.cfg',
-    outputPath: 'C:/TI_RTOS/Workspace/RT_FinProj_Part1_MontanoHadad/.config/xconfig_empty',
+    cfg:        'C:/TI_RTOS/Workspace/RT_FinProj_Part2_MontanoHadad/empty.cfg',
+    outputPath: 'C:/TI_RTOS/Workspace/RT_FinProj_Part2_MontanoHadad/.config/xconfig_empty',
     exeName:    'empty' + suffix,
     exeIntName: 'empty' + suffix.replace('.', '_'),
     targ:       targ,

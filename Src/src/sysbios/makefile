@@ -16,7 +16,7 @@ BIOS_INC  = -I"C:/ti/tirtos_msp43x_2_14_03_28/products/bios_6_42_03_35/packages/
 
 TARGET_INC = -I"C:/ti/tirtos_msp43x_2_14_03_28/products/bios_6_42_03_35/packages/"
 
-INCS = $(BIOS_INC) $(TARGET_INC)  --include_path="C:/ti/ccsv6/ccs_base/msp430/include" --include_path="C:/TI_RTOS/Workspace/RT_FinProj_Part1_MontanoHadad" --include_path="C:/ti/tirtos_msp43x_2_14_03_28/products/MSPWare_2_00_00_40c/driverlib/MSP430F5xx_6xx" --include_path="C:/ti/tirtos_msp43x_2_14_03_28/packages/ti/drivers/wifi/cc3100/Simplelink" --include_path="C:/ti/tirtos_msp43x_2_14_03_28/packages/ti/drivers/wifi/cc3100/Simplelink/Include" --include_path="C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/include" 
+INCS = $(BIOS_INC) $(TARGET_INC)  --include_path="C:/ti/ccsv6/ccs_base/msp430/include" --include_path="C:/TI_RTOS/Workspace/RT_FinProj_Part2_MontanoHadad" --include_path="C:/ti/tirtos_msp43x_2_14_03_28/products/MSPWare_2_00_00_40c/driverlib/MSP430F5xx_6xx" --include_path="C:/ti/tirtos_msp43x_2_14_03_28/packages/ti/drivers/wifi/cc3100/Simplelink" --include_path="C:/ti/tirtos_msp43x_2_14_03_28/packages/ti/drivers/wifi/cc3100/Simplelink/Include" --include_path="C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/include" 
 
 CC = C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/bin/cl430 --abi=eabi -c $(CCOPTS) -I C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/include
 ASM = C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/bin/cl430 --abi=eabi -c $(CCOPTS) -I C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/include
@@ -45,7 +45,7 @@ msp430_TaskSupport_asm.obj: family/msp430/TaskSupport_asm.asm makefile
 	$(ASSEMBLE) --output_file=msp430_TaskSupport_asm.obj
 
 
-BIOS.obj: BIOS.c family/msp430/Hwi.c family/msp430/IntrinsicsSupport.c family/msp430/TaskSupport.c family/msp430/Timer.c family/msp430/TimestampProvider.c family/msp430/ClockFreqs.c knl/Clock.c knl/Idle.c knl/Intrinsics.c knl/Event.c knl/Queue.c knl/Semaphore.c knl/Swi.c knl/Swi_andn.c knl/Task.c hal/Hwi.c hal/Hwi_stack.c hal/Hwi_startup.c heaps/HeapMem.c gates/GateHwi.c gates/GateMutex.c utils/Load.c utils/Load_CPU.c ./HwiFuncs.c makefile
+BIOS.obj: BIOS.c family/msp430/Hwi.c family/msp430/IntrinsicsSupport.c family/msp430/TaskSupport.c family/msp430/Timer.c family/msp430/TimestampProvider.c family/msp430/ClockFreqs.c knl/Clock.c knl/Idle.c knl/Intrinsics.c knl/Event.c knl/Queue.c knl/Semaphore.c knl/Swi.c knl/Swi_andn.c knl/Task.c hal/Hwi.c hal/Hwi_stack.c hal/Hwi_startup.c heaps/HeapMem.c gates/GateHwi.c gates/GateMutexPri.c gates/GateMutex.c utils/Load.c utils/Load_CPU.c ./HwiFuncs.c makefile
 	@-$(call RM, $@)
 	@echo cle430X $< ...
 	@$(CC) $(BIOS_DEFS) $(XOPTS) $(INCS) \
@@ -70,6 +70,7 @@ BIOS.obj: BIOS.c family/msp430/Hwi.c family/msp430/IntrinsicsSupport.c family/ms
 	$(BIOS_ROOT)hal/Hwi_startup.c \
 	$(BIOS_ROOT)heaps/HeapMem.c \
 	$(BIOS_ROOT)gates/GateHwi.c \
+	$(BIOS_ROOT)gates/GateMutexPri.c \
 	$(BIOS_ROOT)gates/GateMutex.c \
 	$(BIOS_ROOT)utils/Load.c \
 	$(BIOS_ROOT)utils/Load_CPU.c \

@@ -119,32 +119,32 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-RT_FinProj_Part1_MontanoHadad.out \
+RT_FinProj_Part2_MontanoHadad.out \
 
 EXE_OUTPUTS__QUOTED += \
-"RT_FinProj_Part1_MontanoHadad.out" \
+"RT_FinProj_Part2_MontanoHadad.out" \
 
 BIN_OUTPUTS += \
-RT_FinProj_Part1_MontanoHadad.hex \
+RT_FinProj_Part2_MontanoHadad.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"RT_FinProj_Part1_MontanoHadad.hex" \
+"RT_FinProj_Part2_MontanoHadad.hex" \
 
 
 # All Target
-all: RT_FinProj_Part1_MontanoHadad.out
+all: RT_FinProj_Part2_MontanoHadad.out
 
 # Tool invocations
-RT_FinProj_Part1_MontanoHadad.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+RT_FinProj_Part2_MontanoHadad.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MSP430 Linker'
-	"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 -g --define=__MSP430F5529__ --define=ccs --define=MSP430WARE --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"RT_FinProj_Part1_MontanoHadad.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv6/ccs_base/msp430/include" -i"C:/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/include" --reread_libs --warn_sections --diag_wrap=off --display_error_number --xml_link_info="RT_FinProj_Part1_MontanoHadad_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "RT_FinProj_Part1_MontanoHadad.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 -g --define=__MSP430F5529__ --define=ccs --define=MSP430WARE --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"RT_FinProj_Part2_MontanoHadad.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv6/ccs_base/msp430/include" -i"C:/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/lib" -i"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/include" --reread_libs --warn_sections --diag_wrap=off --display_error_number --xml_link_info="RT_FinProj_Part2_MontanoHadad_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "RT_FinProj_Part2_MontanoHadad.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-RT_FinProj_Part1_MontanoHadad.hex: $(EXE_OUTPUTS)
+RT_FinProj_Part2_MontanoHadad.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: MSP430 Hex Utility'
-	"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/bin/hex430" --memwidth=8 --romwidth=8 -o "RT_FinProj_Part1_MontanoHadad.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.5/bin/hex430" --memwidth=8 --romwidth=8 -o "RT_FinProj_Part2_MontanoHadad.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 

@@ -5,7 +5,7 @@ digraph configuration {
     concentrate=true;
     compound=true;
     label="\nConfiguration for configPkg/empty.xe430X"
-  node [font=Helvetica, fontsize=14, fontcolor=black];  subgraph cluster0 {label=""; __cfg [label="C:/TI_RTOS/Workspace/RT_FinProj_Part1_MontanoHadad/empty.cfg", color=white, fontcolor=blue];
+  node [font=Helvetica, fontsize=14, fontcolor=black];  subgraph cluster0 {label=""; __cfg [label="C:/TI_RTOS/Workspace/RT_FinProj_Part2_MontanoHadad/empty.cfg", color=white, fontcolor=blue];
     node [font=Helvetica, fontsize=10];    subgraph cluster1 {
         label="";
         xdc_services_global__top [shape=box,label="xdc.services.global\n1,0,0,0", color=white];
@@ -415,37 +415,19 @@ digraph configuration {
     }
     subgraph cluster41 {
         label="";
-        ti_sysbios_syncs__top [shape=box,label="ti.sysbios.syncs\n2,0,0,0,0", color=white];
-        ti_sysbios_syncs__bot [shape=point,label="", style=invis];
-    }
-    subgraph cluster42 {
-        label="";
-        ti_drivers__top [shape=box,label="ti.drivers\n1,0,0,1429904025628", color=white];
-        ti_drivers__bot [shape=point,label="", style=invis];
-        ti_drivers_GPIO [style=filled,fillcolor=lightgray, label="GPIO"];
-        ti_drivers__top -> ti_drivers_GPIO[style=invis];
-        ti_drivers_GPIO -> ti_drivers__bot[style=invis];
-    }
-    subgraph cluster43 {
-        label="";
-        ti_tirtos__top [shape=box,label="ti.tirtos\n1,0,0,0", color=white];
-        ti_tirtos__bot [shape=point,label="", style=invis];
-        ti_tirtos_TIRTOS [style=filled,fillcolor=lightgray, label="TIRTOS"];
-        ti_tirtos__top -> ti_tirtos_TIRTOS[style=invis];
-        ti_tirtos_TIRTOS -> ti_tirtos__bot[style=invis];
-    }
-    subgraph cluster44 {
-        label="";
-        ti_sysbios_gates__top [shape=box,label="ti.sysbios.gates\n2,0,0,0,1429904025628", color=white];
+        ti_sysbios_gates__top [shape=box,label="ti.sysbios.gates\n2,0,0,0,0", color=white];
         ti_sysbios_gates__bot [shape=point,label="", style=invis];
         ti_sysbios_gates_GateHwi [style=filled,fillcolor=lightgray, label="GateHwi"];
         ti_sysbios_gates__top -> ti_sysbios_gates_GateHwi[style=invis];
         ti_sysbios_gates_GateHwi -> ti_sysbios_gates__bot[style=invis];
+        ti_sysbios_gates_GateMutexPri [style=filled,fillcolor=lightgray, label="GateMutexPri"];
+        ti_sysbios_gates__top -> ti_sysbios_gates_GateMutexPri[style=invis];
+        ti_sysbios_gates_GateMutexPri -> ti_sysbios_gates__bot[style=invis];
         ti_sysbios_gates_GateMutex [style=filled,fillcolor=lightgray, label="GateMutex"];
         ti_sysbios_gates__top -> ti_sysbios_gates_GateMutex[style=invis];
         ti_sysbios_gates_GateMutex -> ti_sysbios_gates__bot[style=invis];
     }
-    subgraph cluster45 {
+    subgraph cluster42 {
         label="";
         ti_sysbios_heaps__top [shape=box,label="ti.sysbios.heaps\n2,0,0,0,0", color=white];
         ti_sysbios_heaps__bot [shape=point,label="", style=invis];
@@ -455,6 +437,27 @@ digraph configuration {
         ti_sysbios_heaps_HeapMem_Module_GateProxy [style=filled,fillcolor=lightgray, label="HeapMem_Module_GateProxy"];
         ti_sysbios_heaps__top -> ti_sysbios_heaps_HeapMem_Module_GateProxy[style=invis];
         ti_sysbios_heaps_HeapMem_Module_GateProxy -> ti_sysbios_heaps__bot[style=invis];
+    }
+    subgraph cluster43 {
+        label="";
+        ti_sysbios_syncs__top [shape=box,label="ti.sysbios.syncs\n2,0,0,0,0", color=white];
+        ti_sysbios_syncs__bot [shape=point,label="", style=invis];
+    }
+    subgraph cluster44 {
+        label="";
+        ti_drivers__top [shape=box,label="ti.drivers\n1,0,0,1429904025628", color=white];
+        ti_drivers__bot [shape=point,label="", style=invis];
+        ti_drivers_GPIO [style=filled,fillcolor=lightgray, label="GPIO"];
+        ti_drivers__top -> ti_drivers_GPIO[style=invis];
+        ti_drivers_GPIO -> ti_drivers__bot[style=invis];
+    }
+    subgraph cluster45 {
+        label="";
+        ti_tirtos__top [shape=box,label="ti.tirtos\n1,0,0,0", color=white];
+        ti_tirtos__bot [shape=point,label="", style=invis];
+        ti_tirtos_TIRTOS [style=filled,fillcolor=lightgray, label="TIRTOS"];
+        ti_tirtos__top -> ti_tirtos_TIRTOS[style=invis];
+        ti_tirtos_TIRTOS -> ti_tirtos__bot[style=invis];
     }
     subgraph cluster46 {
         label="";
@@ -520,13 +523,13 @@ digraph configuration {
     ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [shape=record,label="ti.targets.msp430.elf.MSP430X|1,0,4.4,2",style=filled, fillcolor=lightgrey];
     ti_sysbios_family_msp430__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster40];
     ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [shape=record,label="ti.targets.msp430.elf.MSP430X|1,0,4.4,2",style=filled, fillcolor=lightgrey];
-    ti_sysbios_syncs__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster41];
+    ti_sysbios_gates__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster41];
     ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [shape=record,label="ti.targets.msp430.elf.MSP430X|1,0,4.4,2",style=filled, fillcolor=lightgrey];
-    ti_drivers__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster42];
+    ti_sysbios_heaps__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster42];
     ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [shape=record,label="ti.targets.msp430.elf.MSP430X|1,0,4.4,2",style=filled, fillcolor=lightgrey];
-    ti_sysbios_gates__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster44];
+    ti_sysbios_syncs__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster43];
     ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [shape=record,label="ti.targets.msp430.elf.MSP430X|1,0,4.4,2",style=filled, fillcolor=lightgrey];
-    ti_sysbios_heaps__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster45];
+    ti_drivers__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster44];
     ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [shape=record,label="ti.targets.msp430.elf.MSP430X|1,0,4.4,2",style=filled, fillcolor=lightgrey];
     ti_sysbios_xdcruntime__bot -> ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [ltail=cluster46];
     ti_targets_msp430_elf_MSP430X__1_0_4__4_2 [shape=record,label="ti.targets.msp430.elf.MSP430X|1,0,4.4,2",style=filled, fillcolor=lightgrey];

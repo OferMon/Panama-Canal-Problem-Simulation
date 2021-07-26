@@ -7,5 +7,5 @@
 #       or equal to the generated config header
 #
 linker.cmd: package/cfg/empty_pe430X.xdl
-	$(SED) 's"^\"\(package/cfg/empty_pe430Xcfg.cmd\)\"$""\"C:/TI_RTOS/Workspace/RT_FinProj_Part1_MontanoHadad/Debug/configPkg/\1\""' package/cfg/empty_pe430X.xdl > $@
+	$(SED) 's"^\"\(package/cfg/empty_pe430Xcfg.cmd\)\"$""\"C:/TI_RTOS/Workspace/RT_FinProj_Part2_MontanoHadad/Debug/configPkg/\1\""' package/cfg/empty_pe430X.xdl > $@
 	-$(SETDATE) -r:max package/cfg/empty_pe430X.h compiler.opt compiler.opt.defs

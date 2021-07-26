@@ -9,5 +9,4 @@
 	<rts value="libc.a"/>
 	<createSlaveProjects value=""/>
 	<templateProperties value="id=com.ti.rtsc.TIRTOSmsp430.example_0,type=rtsc,products=com.ti.rtsc.TIRTOSmsp430,xdcToolsVersion=3_31_01_33_core,target=ti.targets.msp430.elf.MSP430X,platform=ti.platforms.msp430:MSP430F5529,buildProfile=release,isHybrid=true,configuroOptions=--compileOptions &quot;${COMPILER_FLAGS} &quot;,"/>
-	<isTargetManual value="false"/>
 </projectOptions>

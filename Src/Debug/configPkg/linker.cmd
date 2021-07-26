@@ -10,12 +10,12 @@
  */
 
 
--l"C:\TI_RTOS\Workspace\RT_FinProj_Part1_MontanoHadad\Debug\configPkg\package\cfg\empty_pe430X.oe430X"
+-l"C:\TI_RTOS\Workspace\RT_FinProj_Part2_MontanoHadad\Debug\configPkg\package\cfg\empty_pe430X.oe430X"
 -l"C:\ti\tirtos_msp43x_2_14_03_28\products\uia_2_00_02_39\packages\ti\uia\sysbios\lib\release\ti.uia.sysbios.ae430X"
 -l"C:/ti/tirtos_msp43x_2_14_03_28/packages/ti/drivers/lib/drivers_MSP430F5529.ae430X"
 -l"C:\ti\tirtos_msp43x_2_14_03_28\products\uia_2_00_02_39\packages\ti\uia\loggers\lib\release\ti.uia.loggers.ae430X"
 -l"C:\ti\tirtos_msp43x_2_14_03_28\products\bios_6_42_03_35\packages\ti\sysbios\fatfs\lib\release\ti.sysbios.fatfs.ae430X"
--l"C:\TI_RTOS\Workspace\RT_FinProj_Part1_MontanoHadad\src\sysbios\sysbios.ae430X"
+-l"C:\TI_RTOS\Workspace\RT_FinProj_Part2_MontanoHadad\src\sysbios\sysbios.ae430X"
 -l"C:\ti\tirtos_msp43x_2_14_03_28\products\bios_6_42_03_35\packages\ti\catalog\msp430\init\lib\ti.catalog.msp430.init.ae430X"
 -l"C:\ti\tirtos_msp43x_2_14_03_28\products\uia_2_00_02_39\packages\ti\uia\runtime\lib\release\ti.uia.runtime.ae430X"
 -l"C:\ti\tirtos_msp43x_2_14_03_28\products\uia_2_00_02_39\packages\ti\uia\events\lib\release\ti.uia.events.ae430X"
@@ -35,7 +35,7 @@
 
 --args 0x0
 -heap  0x0
--stack 0x300
+-stack 0x352
 
 /*
  * Linker command file contributions from all loaded packages:
@@ -129,15 +129,15 @@
 
 /* Content from ti.sysbios.family.msp430 (null): */
 
+/* Content from ti.sysbios.gates (null): */
+
+/* Content from ti.sysbios.heaps (null): */
+
 /* Content from ti.sysbios.syncs (null): */
 
 /* Content from ti.drivers (null): */
 
 /* Content from ti.tirtos (null): */
-
-/* Content from ti.sysbios.gates (null): */
-
-/* Content from ti.sysbios.heaps (null): */
 
 /* Content from ti.sysbios.xdcruntime (null): */
 

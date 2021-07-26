@@ -7,38 +7,47 @@
 
 #include <xdc/std.h>
 
-#include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle producerTask1;
-
-#include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle consumerTask1;
+#include <ti/sysbios/knl/Clock.h>
+extern const ti_sysbios_knl_Clock_Handle timeSharingClk;
 
 #include <ti/sysbios/knl/Task.h>
 extern const ti_sysbios_knl_Task_Handle ledSrvTask;
 
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle vesselTask1;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle vesselTask2;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle vesselTask3;
+
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle vesselTask4;
+
+#include <ti/sysbios/knl/Queue.h>
+extern const ti_sysbios_knl_Queue_Handle ledSpecQ;
+
+#include <ti/sysbios/knl/Event.h>
+extern const ti_sysbios_knl_Event_Handle vesselReqEvt;
+
 #include <ti/sysbios/knl/Clock.h>
-extern const ti_sysbios_knl_Clock_Handle timeSharingClk;
+extern const ti_sysbios_knl_Clock_Handle barrierOppClk;
+
+#include <ti/sysbios/knl/Clock.h>
+extern const ti_sysbios_knl_Clock_Handle barrierFifoClk;
 
 #include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle fullSlots;
+extern const ti_sysbios_knl_Semaphore_Handle bOppQueueSem;
 
 #include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle emptySlots;
+extern const ti_sysbios_knl_Semaphore_Handle bFifoQueueSem;
 
-#include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle mutex;
+#include <ti/sysbios/gates/GateMutexPri.h>
+extern const ti_sysbios_gates_GateMutexPri_Handle gateMutexPri0;
 
-#include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle ledSrvSchedSem;
-
-#include <ti/sysbios/knl/Semaphore.h>
-extern const ti_sysbios_knl_Semaphore_Handle setLedEnvMutex;
-
-#include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle consumerTask2;
-
-#include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle producerTask2;
+#include <ti/sysbios/knl/Swi.h>
+extern const ti_sysbios_knl_Swi_Handle stopMaintSwi;
 
 #define TI_DRIVERS_WIFI_INCLUDED 0
 
